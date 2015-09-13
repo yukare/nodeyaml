@@ -1,0 +1,28 @@
+uuid: 8ea1bc51-069d-455c-8400-a08cf4b824f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nodeyaml_tags
+    - node.type.nodeyaml
+  module:
+    - entity_reference
+id: node.nodeyaml.field_nodeyaml_tags
+field_name: field_nodeyaml_tags
+entity_type: node
+bundle: nodeyaml
+label: tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+    auto_create: true
+field_type: entity_reference

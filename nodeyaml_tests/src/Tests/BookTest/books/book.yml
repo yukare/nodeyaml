@@ -1,0 +1,16 @@
+book:
+  -
+    uuid: 5a5ae82b-3322-4662-8030-4800de9dc89e
+    title: Test node 9.
+    url: /node/test
+    children:
+      -
+        uuid: 5a5ae82b-3322-4662-8030-4800de9dc88e
+        title: Test node 8.
+        url: /node/test/8
+        children:
+          -
+            uuid: 5a5ae82b-3322-4662-8030-4800de9dc87e
+            title: Test node 7
+            url: /node/test/7
+            children:

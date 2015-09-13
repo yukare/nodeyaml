@@ -1,0 +1,7 @@
+name: 'Node Yaml tests'
+description: 'tests for nodeyaml module'
+type: module
+package: 'Other'
+core: 8.x
+dependencies:
+  - nodeyaml

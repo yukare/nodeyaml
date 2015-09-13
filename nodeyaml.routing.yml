@@ -1,0 +1,26 @@
+# Form for settings/export the nodes.
+nodeyaml.settings_export:
+  path: 'admin/config/development/nodeyaml/export'
+  defaults:
+    _form: '\Drupal\nodeyaml\Form\ExportForm'
+    _title: 'Export Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+# Form for settings/import the nodes.
+nodeyaml.settings_import:
+  path: 'admin/config/development/nodeyaml/import'
+  defaults:
+    _form: '\Drupal\nodeyaml\Form\ImportForm'
+    _title: 'Import Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+# Export the content as zip file.
+nodeyaml.export_zip:
+  path: 'admin/config/development/nodeyaml/export/zip'
+  defaults:
+    _controller: '\Drupal\nodeyaml\Controller\ExportZip::content'
+    _title: 'Export Zip'
+  requirements:
+    _permission: 'administer site configuration'

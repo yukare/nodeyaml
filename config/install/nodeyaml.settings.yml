@@ -1,0 +1,12 @@
+export:
+  types:
+    - all
+  path:
+    node: 'public://nodeyaml/node'
+    book: 'public://nodeyaml/book'
+import:
+  types:
+    - all
+  path:
+    node: 'public://nodeyaml/node'
+    book: 'public://nodeyaml/book'

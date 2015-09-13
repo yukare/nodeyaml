@@ -1,0 +1,38 @@
+nodeyaml.settings:
+  type: mapping
+  label: 'Settings for nodeyaml module.'
+  mapping:
+    export:
+      type: mapping
+      label: 'Settings related to export the node.'
+      mapping:
+        types:
+          type: sequence
+          label: 'Which entity types to export(all, node, book).'
+        path:
+          type: mapping
+          label: 'Path settings'
+          mapping:
+            node:
+              type: string
+              label: 'Path where the files with exported nodes will be.'
+            book:
+              type: string
+              label: 'Path where files with exported books will be'
+    import:
+      type: mapping
+      label: 'Settings related to import the node.'
+      mapping:
+        types:
+          type: sequence
+          label: 'Which entity types to export(all, node, book).'
+        path:
+          type: mapping
+          label: 'Path settings'
+          mapping:
+            node:
+              type: string
+              label: 'Path where the files with imported nodes will be.'
+            book:
+              type: string
+              label: 'Path where files with imported books will be'

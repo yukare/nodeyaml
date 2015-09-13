@@ -1,0 +1,27 @@
+uuid: ec2ecb91-5908-44cb-a804-4ebd129f5341
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.nodeyaml.body
+    - node.type.nodeyaml
+  module:
+    - text
+    - user
+id: node.nodeyaml.teaser
+targetEntityType: node
+bundle: nodeyaml
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  langcode: true

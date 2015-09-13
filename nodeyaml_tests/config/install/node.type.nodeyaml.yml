@@ -1,0 +1,13 @@
+uuid: 7df01404-6c15-454b-8524-36848bfe191d
+langcode: en
+status: true
+dependencies:
+  module:
+third_party_settings:
+name: nodeyaml
+type: nodeyaml
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

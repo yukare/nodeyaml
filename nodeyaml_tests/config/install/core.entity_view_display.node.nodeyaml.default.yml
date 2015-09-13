@@ -1,0 +1,46 @@
+uuid: 417bd0d8-4d4f-493c-8300-bc1759b77ae7
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.node.nodeyaml.body
+    - field.field.node.nodeyaml.field_link
+    - field.field.node.nodeyaml.field_nodeyaml_tags
+    - node.type.nodeyaml
+  module:
+    - link
+    - text
+    - user
+id: node.nodeyaml.default
+targetEntityType: node
+bundle: nodeyaml
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    weight: 102
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_nodeyaml_tags:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  links:
+    weight: 100
+hidden:
+  langcode: true

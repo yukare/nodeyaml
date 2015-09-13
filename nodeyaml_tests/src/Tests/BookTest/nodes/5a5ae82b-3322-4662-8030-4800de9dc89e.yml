@@ -1,0 +1,14 @@
+uuid: 5a5ae82b-3322-4662-8030-4800de9dc89e
+type: nodeyaml
+langcode: en
+title: Test node.
+uid: 1
+status: 1
+created: 1416990482
+promote: 1
+sticky: 0
+revision_timestamp: 1416990482
+revision_uid: 1
+revision_log: 
+path:
+  alias: /node/test
