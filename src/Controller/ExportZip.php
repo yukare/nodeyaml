@@ -5,11 +5,11 @@
  */
 
 namespace Drupal\nodeyaml\Controller;
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
-use Symfony\Component\HttpFoundation\ResponseHeaderBag;
-use Drupal\nodeyaml\Export;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\nodeyaml\Export;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 
 /**
  * Export the content as a zip file.
@@ -32,7 +32,7 @@ class ExportZip extends ControllerBase {
     $export->process();
 
     $response = new BinaryFileResponse(drupal_realpath($export->getZipName()));
-    $response->setContentDisposition(ResponseHeaderBag::DISPOSITION_ATTACHMENT,'export.zip');
+    $response->setContentDisposition(ResponseHeaderBag::DISPOSITION_ATTACHMENT, 'export.zip');
     $response->deleteFileAfterSend(TRUE);
     return $response;
   }

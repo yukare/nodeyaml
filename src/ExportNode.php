@@ -92,10 +92,11 @@ class ExportNode {
         if ($base->getName() == 'path') {
           $this->process_path();
         }
-        // This field is updated each time the node changes, do not export it.
+        // Those fields are updated each time the node changes, not export it.
         elseif ($base->getName() == 'changed' ||
-                $base->getName() == 'nid' ||
-                $base->getName() == 'vid') {
+          $base->getName() == 'nid' ||
+          $base->getName() == 'vid'
+        ) {
         }
         // Handle all other base fields.
         else {
@@ -104,7 +105,6 @@ class ExportNode {
         }
       }
       else {
-        debug($field->get('field_type'));
         if (in_array($field->get('field_type'), $know_types)) {
           $function = 'process_' . $field->get('field_type');
           $this->$function($field->get('field_name'));
@@ -140,7 +140,8 @@ class ExportNode {
    */
   public function process_path() {
     $this->array['path'] = array();
-    $this->array['path']['alias'] = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $this->node->nid->value);
+    $this->array['path']['alias'] = \Drupal::service('path.alias_manager')
+      ->getAliasByPath('/node/' . $this->node->nid->value);
   }
 
 
@@ -166,7 +167,7 @@ class ExportNode {
     $this->array[$field] = array();
     foreach ($terms as $term) {
       /** @var \Drupal\taxonomy\Entity\Term $term */
-      $this->array[$field][]  = $term->getName();
+      $this->array[$field][] = $term->getName();
     }
   }
 

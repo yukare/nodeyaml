@@ -69,7 +69,7 @@ class BookTest extends BaseTest {
       'type' => 'nodeyaml',
       'name' => 'NodeYaml Content',
     );
-   // $this->drupalCreateContentType($settings);
+    // $this->drupalCreateContentType($settings);
 
 
     $this->checkPermissions(array(), TRUE);

@@ -5,7 +5,9 @@
  */
 
 namespace Drupal\nodeyaml;
-use \Symfony\Component\HttpFoundation\BinaryFileResponse;
+
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+
 /**
  * Export the content of all nodes.
  */
@@ -23,6 +25,19 @@ class Export extends BaseOperation {
    * @var string
    */
   protected $zipName = '';
+
+  /**
+   * An associative array with options from drush or form.
+   *
+   * @var array
+   *   An associative array with:
+   *   - debug: show debug output.
+   *   - drush: we are using drush, not web.
+   *   - output: zip to output as zip file.
+   *   - output-file: the file name to output(exemple: export.zip).
+   *   - types: an array of types of entities to export, current node,book,all.
+   */
+  protected $options = array();
 
   /**
    * Call the export function for each type in options or for all if not set.
@@ -51,12 +66,12 @@ class Export extends BaseOperation {
     if (isset($this->options['output']) && $this->options['output'] == 'zip') {
       $this->zipName = $this->createZip();
       // There is a file name to output, use it
-      if(isset($this->options['output-file'])) {
+      if (isset($this->options['output-file'])) {
         $output_file = $this->options['output-file'];
         rename($this->zipName, $output_file);
       }
       // There is not a file name, create one in current path.
-      elseif($this->options['drush']) {
+      elseif ($this->options['drush']) {
         $output_file = getcwd() . '/' . basename($this->zipName) . '.zip';
         rename($this->zipName, $output_file);
       }

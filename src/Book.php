@@ -6,7 +6,8 @@
 
 namespace Drupal\nodeyaml;
 
-use \Drupal\Node\Entity\Node;
+use Drupal\Node\Entity\Node;
+
 /**
  * Basic functions to deal with books.
  */

@@ -9,9 +9,9 @@ namespace Drupal\nodeyaml\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 use Drupal\nodeyaml\Export;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
-use Drupal\Core\Url;
 
 class ExportForm extends ConfigFormBase {
   /**
@@ -29,29 +29,29 @@ class ExportForm extends ConfigFormBase {
       'nodeyaml.settings',
     ];
   }
-  
+
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     /**$form['entity'] = array(
-      '#type' => 'fieldset',
-      '#title' => t('Types of content entities to export.'),
-      '#description' => t('Define which content entities export.'),
-      '#collapsible' => TRUE,
-      '#collapsed' => FALSE,
-    );
-
-    $types = array(
-      'book' => t('Book'),
-      'node' => t('Node'),
-    );
-
-    $form['entity']['type'] = array(
-      '#title' => t('Entity types.'),
-      '#type' => 'checkboxes',
-      '#options' => $types,
-    );*/
+     * '#type' => 'fieldset',
+     * '#title' => t('Types of content entities to export.'),
+     * '#description' => t('Define which content entities export.'),
+     * '#collapsible' => TRUE,
+     * '#collapsed' => FALSE,
+     * );
+     *
+     * $types = array(
+     * 'book' => t('Book'),
+     * 'node' => t('Node'),
+     * );
+     *
+     * $form['entity']['type'] = array(
+     * '#title' => t('Entity types.'),
+     * '#type' => 'checkboxes',
+     * '#options' => $types,
+     * );*/
 
     $form['export'] = array(
       '#type' => 'fieldset',

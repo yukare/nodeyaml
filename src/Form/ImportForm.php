@@ -17,7 +17,7 @@ class ImportForm extends ConfigFormBase {
   public function getFormId() {
     return 'nodeyaml_import_settings';
   }
-  
+
   /**
    * {@inheritdoc}
    */
@@ -26,7 +26,7 @@ class ImportForm extends ConfigFormBase {
       'nodeyaml.settings',
     ];
   }
-  
+
   /**
    * {@inheritdoc}
    */

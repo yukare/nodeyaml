@@ -63,6 +63,7 @@ class Import extends BaseOperation {
     }
 
   }
+
   /**
    * Add the nodes for the file or folder in $path.
    *

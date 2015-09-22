@@ -175,7 +175,7 @@ class ImportNode {
     $vocabulary = $fields[$field]->getSettings()['allowed_values'][0]['vocabulary'];
 
     $values = array();
-    if(is_array($this->array[$field])) {
+    if (is_array($this->array[$field])) {
       foreach ($this->array[$field] as $term) {
         $query = \Drupal::entityQuery('taxonomy_term')
           ->condition('name', $term, "=")

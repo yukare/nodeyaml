@@ -33,7 +33,7 @@ abstract class BaseOperation {
   public function createTemporaryDirectory($path = 'temporary://', $prefix = '') {
     $exists = FALSE;
     $name = '';
-    while(!$exists) {
+    while (!$exists) {
       $name = $path . '/' . $prefix . uniqid();
       drupal_mkdir($name);
       if (is_dir($name)) {
@@ -54,7 +54,7 @@ abstract class BaseOperation {
     $zip = new Zip($name);
     $path = drupal_realpath($this->path);
     $files = $this->listFiles($path);
-    foreach($files as $file) {
+    foreach ($files as $file) {
       $file_inside = substr($file, strlen($path));
       $zip->add($file, $file_inside);
     }
@@ -74,7 +74,7 @@ abstract class BaseOperation {
    *   The path where the zip file is extracted.
    */
   public function extractZip($zip_file, $path = NULL) {
-    if(!$path) {
+    if (!$path) {
       $path = $this->createTemporaryDirectory('temporary://', 'nodeyaml_');
     }
     $zip = new Zip($zip_file);
@@ -106,7 +106,7 @@ abstract class BaseOperation {
     }
     return $files;
   }
-  
+
   /**
    * Define the options used.
    *
